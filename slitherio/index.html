@@ -27,9 +27,15 @@
     let embedurl = "https://www.youtube.com/embed/"
     function archives() {
       archive = archive_date.value;
-      if(archive == '2022-03-07') {
-        archive_min = 1;
-        archive_max = 7;
+      switch (archive){
+        case '2022-03-07':
+          archive_min = 1;
+          archive_max = 7;
+          break;
+        case '2022-03-08':
+          archive_min = 1;
+          archive_max = 3;
+          break;
       }
     }
     function numbers() {
@@ -60,12 +66,24 @@
             case '7':
               frame.src=embedurl+"EaD6DCxReYY";
           }
+          break;
+        case '2022-03-08':
+          switch (archive_number.value){
+            case '1':
+              frame.src=embedurl+"0D0ivy7Jor0";
+              break;
+            case '2':
+              frame.src=embedurl+"pq0BhCTGVTw";
+              break;
+            case '3':
+              frame.src=embedurl+"s1r2kigrlis";
+          }
       }
     }
   </script>
 </head>
 <body>
-  <input type="date" min="2022-03-07" max="2022-03-07" id="archive_date" oninput="archives()">
+  <input type="date" min="2022-03-07" max="2022-03-08" id="archive_date" oninput="archives()">
   <input type="number" id="archive_number" oninput="numbers()" placeholder="アーカイブ番号">
   <div class="embed"><iframe width="560" height="315" id="frame" allowfullscreen></iframe></div>
 </body>
