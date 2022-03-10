@@ -36,6 +36,9 @@
           archive_min = 1;
           archive_max = 3;
           break;
+        case '2022-03-09':
+          archive_min = 1;
+          archive_max = 9;
       }
     }
     function numbers() {
@@ -78,12 +81,42 @@
             case '3':
               frame.src=embedurl+"s1r2kigrlis";
           }
+          break;
+        case '2022-03-09':
+          switch (archive_number.value){
+            case '1':
+              frame.src=embedurl+"Qr05MZMjduY";
+              break;
+            case '2':
+              frame.src=embedurl+"JpWn2Q6s4G8";
+              break;
+            case '3':
+              frame.src=embedurl+"1BRNzhy0hno";
+              break;
+            case '4':
+              frame.src=embedurl+"CupMOx2VtL8";
+              break;
+            case '5':
+              frame.src=embedurl+"EUWJ8fQxmGM";
+              break;
+            case '6':
+              frame.src=embedurl+"VyzD7Rhhrck";
+              break;
+            case '7':
+              frame.src=embedurl+"a5VSaZU4Eig";
+              break;
+            case '8':
+              frame.src=embedurl+"djHoDe4iz-4";
+              break;
+            case '9':
+              frame.src=embedurl+"dl65iJZjAlk";
+          }
       }
     }
   </script>
 </head>
 <body>
-  <input type="date" min="2022-03-07" max="2022-03-08" id="archive_date" oninput="archives()">
+  <input type="date" min="2022-03-07" max="2022-03-09" id="archive_date" oninput="archives()">
   <input type="number" id="archive_number" oninput="numbers()" placeholder="アーカイブ番号">
   <div class="embed"><iframe width="560" height="315" id="frame" allowfullscreen></iframe></div>
 </body>
