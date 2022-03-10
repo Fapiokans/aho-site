@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script>
+  function ik() {
+    let o = '';
+    for(let i=1;i<n.value;i++){
+      o += `ffmpeg -r 60 -i 's (${i}).mp4' -s 680x340 -b:v 320k -bufsize 320k -maxrate 640k -c:v libx264 'out (${i}).mp4' &&`
+      out.value = o;
+    }
+  }
+  </script>
+</head>
+<body>
+  <input type="number" id="n">
+  <input type="button" onclick="ik()" value="いきますよー">
+  <input type="text" id="out" autocomplete>
+</body>
+</html>

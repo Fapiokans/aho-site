@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script>
+    let archive_min = 0;
+    let archive_max = 0;
+    let archive = 0;
+    let embedurl = "https://media.discordapp.net/attachments/951406338871787551/951413660323049582/"
+    function archives() {
+      archive = archive_date.value;
+      switch (archive){
+        case '2022-03-09':
+          archive_min = 1;
+          archive_max = 23;
+      }
+    }
+    function numbers() {
+      if(!archive_number.value) return;
+      if(archive_number.value < archive_min) archive_number.value = archive_min;
+      if(archive_number.value > archive_max) archive_number.value = archive_max;
+      switch (archive){
+        case '2022-03-09':
+          switch (archive_number.value){
+            case '1':
+              frame.src=embedurl+"out_1.mp4";
+              break;
+          }
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="date" min="2022-03-07" max="2022-03-09" id="archive_date" oninput="archives()">
+  <input type="number" id="archive_number" oninput="numbers()" placeholder="アーカイブ番号">
+  <video id="frame"></video>
+</body>
+</html>
