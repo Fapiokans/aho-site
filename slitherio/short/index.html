@@ -32,6 +32,12 @@
           archive_min = 1;
           archive_max = 23;
           embedurl = "https://media.discordapp.net/attachments/951406338871787551/"
+          break;
+        case '2022-03-10':
+          archive_min = 1;
+          archive_max = 13;
+          embedurl = "https://media.discordapp.net/attachments/951701534389977158/"
+          break;
       }
     }
     function numbers() {
@@ -111,12 +117,56 @@
               frame.src=embedurl+"951426546927816704/out_23.mp4";
               break;
           }
+          break;
+        case '2022-03-10':
+          switch (archive_number.value){
+            case '1':
+              frame.src=embedurl+"951701644930842674/out_1.mp4";
+              break;
+            case '2':
+              frame.src=embedurl+"951701645245448192/out_2.mp4";
+              break;
+            case '3':
+              frame.src=embedurl+"951701645719392296/out_3.mp4";
+              break;
+            case '4':
+              frame.src=embedurl+"951701646222696489/out_4.mp4";
+              break;
+            case '5':
+              frame.src=embedurl+"951701683283578921/out_5.mp4";
+              break;
+            case '6':
+              frame.src=embedurl+"951701683753349120/out_6.mp4";
+              break;
+            case '7':
+              frame.src=embedurl+"951701684197949500/out_7.mp4";
+              break;
+            case '8':
+              frame.src=embedurl+"951701684860620860/out_8.mp4";
+              break;
+            case '9':
+              frame.src=embedurl+"951701730981195827/out_9.mp4";
+              break;
+            case '10':
+              frame.src=embedurl+"951701731551608872/out_10.mp4";
+              break;
+            case '11':
+              frame.src=embedurl+"951701731966873600/out_11.mp4";
+              break;
+            case '12':
+              frame.src=embedurl+"951701761176010782/out_12.mp4";
+              break;
+            case '13':
+              frame.src=embedurl+"951701761779970088/out_13.mp4";
+              break;
+          }
+          break;
       }
     }
   </script>
 </head>
 <body>
-  <input type="date" min="2022-03-07" max="2022-03-09" id="archive_date" oninput="archives()">
+  <input type="date" min="2022-03-09" max="2022-03-10" id="archive_date" oninput="archives()">
   <input type="number" id="archive_number" oninput="numbers()" placeholder="アーカイブ番号">
   <div class="embed"><video id="frame" controls></video></div>
 </body>
